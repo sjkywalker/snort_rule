@@ -1,0 +1,8 @@
+alert tcp any any -> any 80 (msg:"gilgil.net detected"; content:"GET /"; content:"Host: gilgil.net"; sid:10001; rev:1;)
+alert tcp any any -> any 80 (msg:"www.gilgil.net detected"; content:"GET /"; content:"Host: www.gilgil.net"; sid:10002; rev:1;)
+alert tcp any any -> any 80 (msg:"test.gilgil.net detected"; content:"GET /"; content:"Host: test.gilgil.net"; sid:10003; rev:1;)
+alert tcp any any -> any 80 (msg:"snoopspy.com detected"; content:"GET /"; content:"Host: snoopspy.com"; sid:10004; rev:1;)
+alert udp any any -> any 53 (msg:"naver.com detected"; dns_query; content:"naver.com"; sid:10005; rev:1;)
+alert udp any any -> any 53 (msg:"twitter.com detected"; dns_query; content:"twitter.com"; sid:10006; rev:1;)
+alert udp any any -> any 53 (msg:"facebook.com detected"; dns_query; content:"facebook.com"; sid:10007; rev:1;)
+
